@@ -22,3 +22,28 @@
   background: linear-gradient(rgb(128, 128, 128, 0.3), rgb(41, 40, 40, 0.2));
   box-shadow: 1px -4px 15px 1px rgb(221 221 221 / 40%);
 }
+
+@media (max-width:600px){
+  .weather_data {
+    margin-top: 20px;
+  }
+  .weather_forecast {
+    box-shadow: none;
+  }
+  .forecast {
+    width: 350px;
+  }
+  .forecast_first {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px;
+  }
+  .weather-forecast-date {
+    font-size: 18px;
+  }
+  .forecast-icon {
+    width: 30px;
+    height: 30px;
+    margin: 0 auto;
+  }
+}
