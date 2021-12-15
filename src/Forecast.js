@@ -10,7 +10,11 @@ export default function Forecast() {
             <div className="forecast_first">
               Thursday
               <div className="weather-forecast-date"></div>
-              <img src="suncloud.png" className="forecast-icon" alt="" />
+              <img
+                src="suncloud.png"
+                className="forecast-icon"
+                alt="forecast-icon"
+              />
               <div className="weather-forecast-temperature">5°</div>
             </div>
           </div>
@@ -21,7 +25,11 @@ export default function Forecast() {
             <div className="forecast_first">
               Thursday
               <div className="weather-forecast-date"></div>
-              <img src="suncloud.png" className="forecast-icon" alt="" />
+              <img
+                src="suncloud.png"
+                className="forecast-icon"
+                alt="forecast-icon"
+              />
               <div className="weather-forecast-temperature">5°</div>
             </div>
           </div>
@@ -32,7 +40,11 @@ export default function Forecast() {
             <div className="forecast_first">
               Thursday
               <div className="weather-forecast-date"></div>
-              <img src="suncloud.png" className="forecast-icon" alt="" />
+              <img
+                src="suncloud.png"
+                className="forecast-icon"
+                alt="forecast-icon"
+              />
               <div className="weather-forecast-temperature">5°</div>
             </div>
           </div>
@@ -43,7 +55,11 @@ export default function Forecast() {
             <div className="forecast_first">
               Thursday
               <div className="weather-forecast-date"></div>
-              <img src="suncloud.png" className="forecast-icon" alt="" />
+              <img
+                src="suncloud.png"
+                className="forecast-icon"
+                alt="forecast-icon"
+              />
               <div className="weather-forecast-temperature">5°</div>
             </div>
           </div>
@@ -54,7 +70,11 @@ export default function Forecast() {
             <div className="forecast_first">
               Thursday
               <div className="weather-forecast-date"></div>
-              <img src="suncloud.png" className="forecast-icon" alt="" />
+              <img
+                src="suncloud.png"
+                className="forecast-icon"
+                alt="forecast-icon"
+              />
               <div className="weather-forecast-temperature">5°</div>
             </div>
           </div>
