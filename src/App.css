@@ -23,17 +23,23 @@ body {
   height: auto;
   border-radius: 20px;
   /*background: linear-gradient(rgb(128, 128, 128, 0.7), rgb(41, 40, 40, 0.6));*/
-    background: linear-gradient(rgb(128, 128, 128, 0.6), rgb(41, 40, 40, 0.2));
+  background: linear-gradient(rgb(128, 128, 128, 0.6), rgb(41, 40, 40, 0.2));
   box-shadow: 4px -6px 10px 2px rgba(221, 221, 221, 0.4);
 }
 
-/* .container {
-    margin: 80px auto;
-    width: 900px;
-  }*/
 .App {
   margin: 80px auto;
   width: 900px;
+}
+
+@media (max-width: 600px) {
+  .App {
+    width: 350px;
+    margin-top: 20px;
+  }
+  .container_hero {
+    background: linear-gradient(rgb(128, 128, 128, 0.4), rgb(41, 40, 40, 0.9));
+  }
 }
 
 /*
