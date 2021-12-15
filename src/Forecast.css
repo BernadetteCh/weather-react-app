@@ -29,6 +29,7 @@
   }
   .weather_forecast {
     box-shadow: none;
+    margin-top: 50px;
   }
   .forecast {
     width: 350px;
