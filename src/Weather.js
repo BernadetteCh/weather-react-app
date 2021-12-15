@@ -3,12 +3,11 @@ import "./Weather.css";
 export default function Weather() {
   let weatherData = {
     city: "Graz",
-    temperature: 16,
+    temperature: 6,
     description: "cloudy",
     date: "Saturday 10:20",
     humidity: 87,
     wind: 6,
-    imgUrl: "/suncloud.png",
   };
   return (
     <div className="weatherinformation">
@@ -21,14 +20,15 @@ export default function Weather() {
                 <a
                   href="https://www.google.at/"
                   className="celsius-temperature"
-                >°C
+                >
+                  °C
                 </a>
               </span>
             </div>
           </section>
 
           <img
-            src={weatherData.imgUrl}
+            src="suncloud.png"
             className="icon"
             alt={weatherData.description}
           />
@@ -51,7 +51,7 @@ export default function Weather() {
           </section>
         </div>
       </div>
-      //Weatherseach
+
       <div className="search">
         <form className="search-form">
           <input
