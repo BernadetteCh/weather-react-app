@@ -1,6 +1,6 @@
-
 .footer a {
-  color: #8d5d5d;
+  color: white;
+  /* color: #8d5d5d;*/
 }
 .footer a:hover {
   color: #c5b9b9;
@@ -9,8 +9,22 @@
   font-size: 10px;
   text-decoration: none;
 }
+
 .footer {
   text-align: center;
-  color: var(--primary-color);
-  margin-top: 40px;
+  font-weight: lighter;
+  color: #c5b9b9;
+  word-spacing: 8px;
+  letter-spacing: 2px;
+  margin-top: 140px;
+}
+
+@media(max-width:600px){
+  .footer{
+    margin-top: 50px;
+    font-size: 11px;
+  }
+  .footer p{
+    margin-top: 15px;
+  }
 }
