@@ -1,0 +1,23 @@
+.weather-forecast-date {
+  font-size: 22px;
+  text-align: center;
+  font-family: var(--paragraph-font-family);
+  color: var(--primary-color);
+}
+.forecast-icon {
+  width: 45px;
+}
+.weather-forecast-temperature {
+  font-size: 19px;
+  margin-left: 10px;
+  font-family: var(--paragraph-font-family);
+  color: var(--primary-color);
+}
+.weather_forecast {
+  padding: 10px;
+  margin-top: 100px;
+  border-radius: 20px;
+  font-family: var(--paragraph-font-family);
+  color: var(--primary-color);
+  box-shadow: 4px 6px 10px 2px rgba(221, 221, 221, 0.4);
+}
