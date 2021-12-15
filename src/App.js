@@ -2,7 +2,7 @@ import "./App.css";
 import Weather from "./Weather";
 import Hero from "./Hero";
 import Footer from "./Footer";
-
+import Forecast from "./Forecast";
 
 function App() {
   return (
@@ -11,6 +11,7 @@ function App() {
         <Hero />
         <Weather />
       </div>
+      <Forecast />
       <Footer />
     </div>
   );
