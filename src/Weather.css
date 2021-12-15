@@ -1,0 +1,110 @@
+h1 {
+  font-family: var(--heading-font-family);
+  font-size: 50px;
+  color: var(--primary-color);
+}
+img {
+  width: 60px;
+  float: right;
+}
+
+h2 {
+  font-family: var(--paragraph-font-family);
+  font-size: 20px;
+  color: var(--primary-color);
+}
+
+li {
+  list-style: none;
+
+  text-align: justify;
+  letter-spacing: 2px;
+  margin-bottom: 0;
+  margin-left: 180px;
+  line-height: 22px;
+  font-size: 14px;
+  font-family: var(--paragraph-font-family);
+}
+form {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+input[type="text"] {
+  border: 1px solid white;
+  color: var(--primary-color);
+  font-family: var(--subparagraph-font-family);
+  border-radius: 15px;
+  margin: 0 10px;
+  padding: 5px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+input[type="submit"] {
+  border: 1px solid var(--third-color);
+  border-radius: 15px;
+  margin: 0 5px;
+  padding: 7px;
+  width: 90px;
+
+  background-color: rgb(236, 196, 196, 0.8);
+  color: black;
+
+  transition: all 400ms ease-in-out;
+
+  font-family: var(--subparagraph-font-family);
+}
+
+input[type="submit"]:hover {
+  background-color: rgb(141, 93, 93, 0.9);
+  color: var(--primary-color);
+  border: 1px solid var(--secondary-color);
+}
+button {
+  border: 1px solid var(--secondary-color);
+  border-radius: 15px;
+  margin: 0 5px;
+  padding: 7px;
+  background-color: rgb(141, 93, 93, 0.9);
+  color: var(--primary-color);
+  font-family: var(--subparagraph-font-family);
+
+  transition: all 400ms ease-in-out;
+}
+
+button:hover {
+  background-color: rgb(236, 196, 196, 0.8);
+  color: black;
+  border: 1px solid var(--third-color);
+}
+
+.humidity,
+.wind {
+  margin-bottom: 0;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+.weather_data {
+  margin-top: 80px;
+  color: var(--primary-color);
+}
+
+.degree {
+  font-family: var(--paragraph-font-family);
+  font-size: 50px;
+  color: var(--primary-color);
+}
+
+.celsius-temperature {
+  text-decoration: none;
+  font-family: var(--paragraph-font-family);
+  font-size: 20px;
+  vertical-align:top;
+  color: var(--primary-color);
+}
+.search-form {
+  padding-bottom: 20px;
+}
+
