@@ -8,6 +8,7 @@ export default function Weather() {
     date: "Saturday 10:20",
     humidity: 87,
     wind: 6,
+    img: "suncloud.png",
   };
   return (
     <div className="weatherinformation">
@@ -28,7 +29,7 @@ export default function Weather() {
           </section>
 
           <img
-            src="suncloud.png"
+            src={weatherData.img}
             className="icon"
             alt={weatherData.description}
           />
