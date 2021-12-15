@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./Weather.css";
 export default function Weather() {
   let weatherData = {
     city: "Graz",
@@ -20,10 +20,8 @@ export default function Weather() {
               <span className="units">
                 <a
                   href="https://www.google.at/"
-                  id="celsius-temperature"
-                  className="active"
-                >
-                  °C
+                  className="celsius-temperature"
+                >°C
                 </a>
               </span>
             </div>
@@ -31,7 +29,7 @@ export default function Weather() {
 
           <img
             src={weatherData.imgUrl}
-            id="icon"
+            className="icon"
             alt={weatherData.description}
           />
           <h1>{weatherData.city}</h1>
@@ -55,14 +53,14 @@ export default function Weather() {
       </div>
       //Weatherseach
       <div className="search">
-        <form id="search-form">
+        <form className="search-form">
           <input
-            id="input-city"
+            className="input-city"
             type="text"
             placeholder="Enter City"
             autoComplete="off"
           />
-          <input id="input-submit" type="submit" value="Search" />
+          <input className="input-submit" type="submit" value="Search" />
           <button>Current Location</button>
         </form>
       </div>
