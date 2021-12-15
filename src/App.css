@@ -1,7 +1,40 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Cabin&family=Lato&family=Titan+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cabin&family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Concert+One&family=Montserrat+Alternates&family=Titan+One&display=swap");
+
+:root {
+  --heading-font-family: "Titan One", cursive;
+  --paragraph-font-family: "Cabin", sans-serif;
+  --subparagraph-font-family: "Montserrat Alternates", sans-serif;
+
+  --primary-color: #ffffff;
+  --secondary-color: #ecc4c4;
+  --third-color: #8d5d5d;
+}
+body {
+  background-image: url("world.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: auto;
+  backdrop-filter: blur(2px);
 }
 
+.container_hero {
+  height: auto;
+  border-radius: 20px;
+  /*background: linear-gradient(rgb(128, 128, 128, 0.7), rgb(41, 40, 40, 0.6));*/
+
+  box-shadow: 4px -6px 10px 2px rgba(221, 221, 221, 0.4);
+}
+
+/* .container {
+    margin: 80px auto;
+    width: 900px;
+  }*/
+.App {
+  margin: 80px auto;
+  width: 900px;
+}
 
 /*
 @media (prefers-reduced-motion: no-preference) {
