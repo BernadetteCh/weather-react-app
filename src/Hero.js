@@ -1,5 +1,40 @@
 import React from "react";
 
 export default function Hero() {
-  return <p>Hallo from Hero</p>;
+  return (
+    <div>
+      <header>
+        <div className="row">
+          <div className="col-3">
+            <div className="city_navigation">
+              <a href="https://#/" id="NewYork">
+                NewYork
+              </a>
+            </div>
+          </div>
+          <div className="col-3">
+            <div className="city_navigation">
+              <a href="https://#/" id="Vienna">
+                Vienna
+              </a>
+            </div>
+          </div>
+          <div className="col-3">
+            <div className="city_navigation">
+              <a href="https://#/" id="London">
+                London
+              </a>
+            </div>
+          </div>
+          <div className="col-3">
+            <div className="city_navigation">
+              <a href="https://#/" id="Paris">
+                Paris
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+  );
 }
