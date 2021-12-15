@@ -17,7 +17,7 @@ export default function Weather() {
       <div className="row justify-content-evenly mt-5">
         <div className="col-4 ms-sm-5">
           <section className="temperature">
-            <div id="celsius">
+            <div className="celsius">
               <span className="degree">{weatherData.temperature}</span>
               <span className="units">
                 <a
