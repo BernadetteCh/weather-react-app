@@ -12,7 +12,11 @@ export default function Footer() {
       >
         Open-source Code,
       </a>{" "}
-      by Bernadette Christiner and hosted on{" "}
+      by{" "}
+      <a href="https://lucid-williams-1b13b8.netlify.app/" target="_blank" rel="noreferrer">
+        Bernadette Christiner
+      </a>{" "}
+      and hosted on{" "}
       <a
         href="https://optimistic-curran-8bd91f.netlify.app"
         target="_blank"
