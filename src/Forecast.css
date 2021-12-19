@@ -23,7 +23,7 @@
   box-shadow: 1px -4px 15px 1px rgb(221 221 221 / 40%);
 }
 
-@media (max-width:600px){
+@media (max-width: 600px) {
   .weather_data {
     margin-top: 20px;
   }
