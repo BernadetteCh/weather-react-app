@@ -1,5 +1,6 @@
 .footer a {
   color: white;
+  text-decoration: none;
   /* color: #8d5d5d;*/
 }
 .footer a:hover {
@@ -19,12 +20,12 @@
   margin-top: 140px;
 }
 
-@media(max-width:600px){
-  .footer{
+@media (max-width: 600px) {
+  .footer {
     margin-top: 50px;
     font-size: 11px;
   }
-  .footer p{
+  .footer p {
     margin-top: 15px;
   }
 }
