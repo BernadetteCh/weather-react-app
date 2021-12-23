@@ -1,26 +1,23 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
+import "./FormattedDate";
+import FormattedDate from "./FormattedDate";
 
 export default function Weather(props) {
   const [weather, setWeather] = useState({ loaded: false }); //bei default hat es das value loaded:false
 
   function displayWeatherdata(response) {
+    console.log(response.data);
     setWeather({
       loaded: true,
       temperature: Math.round(response.data.main.temp),
       description: response.data.weather[0].description,
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
-      date: "Saturday 10:20",
+      date: new Date(response.data.dt * 1000), //mit response.data.dt bekomm i die Computerzeit, die muss man mit 1000 multiplizieren und so kraig i die aktuelle Zeit. dann erstell i a component im return , dem diese Berechnung zugewiesen wird und des passiert mit FormattedDate date={weather.date}; newDate des is afoch der Code um zur aktuellen Zeit zu kommen, denn wenn i console.log(response.data.dt) moch erhalt i für dt eine längere Zahl. und mit newDate weiß der PC dass er die aktuelle Zeit ausrechnen muss, weil der PC bzw. JAva rechnet mit Zahlen seid ca 1970.....  
       icon: ` http://openweathermap.org/img/wn/${response.data.weather[0].icon}.png`,
     });
-  }
-
-  function handleApi() {
-    let apikey = "4ccd9ecf2f417deee06840bdb3b5e20a";
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&units=metric&appid=${apikey}`;
-    axios.get(url).then(displayWeatherdata);
   }
 
   let form = (
@@ -57,7 +54,9 @@ export default function Weather(props) {
 
             <img src={weather.icon} className="icon" alt="description" />
             <h1>Paris</h1>
-            <h2 id="date">{weather.date}</h2>
+            <h2 id="date">
+              <FormattedDate date={weather.date} />
+            </h2>
           </div>
           <div className="col-sm-6">
             <section className="weather_data">
@@ -79,7 +78,9 @@ export default function Weather(props) {
       </div>
     );
   } else {
-    handleApi();
-    return <div>Loading...</div>;
+    let apikey = "4ccd9ecf2f417deee06840bdb3b5e20a";
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&units=metric&appid=${apikey}`;
+    axios.get(url).then(displayWeatherdata);
+    return "Loading...";
   }
 }
