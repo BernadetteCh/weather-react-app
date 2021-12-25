@@ -3,9 +3,10 @@ h1 {
   font-size: 50px;
   color: var(--primary-color);
 }
-img {
+canvas {
   width: 60px;
   float: right;
+  z-index: 6;
 }
 
 h2 {
@@ -29,9 +30,10 @@ form {
   text-align: center;
   margin-top: 30px;
   margin-bottom: 10px;
+ 
 }
 
-input[type="text"] {
+input[type="search"] {
   border: 1px solid white;
   color: var(--primary-color);
   font-family: var(--subparagraph-font-family);
@@ -115,7 +117,7 @@ button:hover {
     font-size: 13px;
     line-height: normal;
   }
-  img {
+  canvas {
     float: none;
     display: block;
     margin: 0 auto;
