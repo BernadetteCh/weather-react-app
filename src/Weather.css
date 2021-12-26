@@ -30,7 +30,6 @@ form {
   text-align: center;
   margin-top: 30px;
   margin-bottom: 10px;
- 
 }
 
 input[type="search"] {
@@ -106,6 +105,18 @@ button:hover {
   vertical-align: top;
   color: var(--primary-color);
 }
+.fahrenheit-temperature {
+  text-decoration: none;
+  font-family: var(--paragraph-font-family);
+  font-size: 20px;
+  vertical-align: top;
+  color: var(--primary-color);
+}
+
+.units a{
+  color: var(--secondary-color);
+}
+
 .search-form {
   padding-bottom: 20px;
 }
