@@ -5,7 +5,7 @@ import Hero from "./Hero";
 import Footer from "./Footer";
 import Forecast from "./Forecast";
 
-function App() {
+function App(props) {
   return (
     <div className="container">
       <div className="App">
@@ -13,7 +13,7 @@ function App() {
           <Hero />
           <Weather defaultCity="Paris" />
         </div>
-        <Forecast />
+       <Forecast weatherinformation={props.weather}/>
         <Footer />
       </div>
     </div>
