@@ -4,16 +4,17 @@
   font-family: var(--paragraph-font-family);
   color: var(--primary-color);
 }
-.forecast-icon {
+.forecast-icon canvas{
   width: 45px;
+  float: none;
 }
 .weather-forecast-temperature {
   font-size: 19px;
-  margin-left: 10px;
   font-family: var(--paragraph-font-family);
   color: var(--primary-color);
 }
 .weather_forecast {
+  text-align: center;
   padding: 10px;
   margin-top: 100px;
   border-radius: 20px;
