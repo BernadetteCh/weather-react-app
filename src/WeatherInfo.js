@@ -2,15 +2,18 @@ import React from "react";
 import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
 import UnitConversion from "./UnitConversion";
+import "./WeatherInfo.css";
 
 export default function WeatherInfo(props) {
   return (
     <div className="row justify-content-evenly mt-5">
       <div className="col-4 ms-sm-5">
         <section className="temperature">
-          <UnitConversion celsius={props.data.temperature}/>       
+          <UnitConversion celsius={props.data.temperature} />
         </section>
-        <WeatherIcon code={props.data.icon} />
+        <div className="weatherinfo-icon">
+          <WeatherIcon code={props.data.icon} />
+        </div>
 
         <h1>{props.data.citysearch}</h1>
         <h2 id="date">
