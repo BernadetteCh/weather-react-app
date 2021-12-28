@@ -1,6 +1,6 @@
 import React from "react";
 import "./Forecast.css";
-
+import WeatherIcon from "./WeatherIcon";
 
 export default function Forecast() {
   return (
@@ -9,13 +9,10 @@ export default function Forecast() {
         <div className="col-sm d-flex justify-content-center">
           <div className="forecast">
             <div className="forecast_first">
-              Thursday
-              <div className="weather-forecast-date"></div>
-              <img
-                src="suncloud.png"
-                className="forecast-icon"
-                alt="forecast-icon"
-              />
+              <div className="weather-forecast-date">Thursday</div>
+              <div className="forecast-icon">
+                <WeatherIcon code="01d" size={36} />
+              </div>
               <div className="weather-forecast-temperature">5°</div>
             </div>
           </div>
@@ -24,13 +21,10 @@ export default function Forecast() {
         <div className="col-sm d-flex justify-content-center">
           <div className="forecast">
             <div className="forecast_first">
-              Thursday
-              <div className="weather-forecast-date"></div>
-              <img
-                src="suncloud.png"
-                className="forecast-icon"
-                alt="forecast-icon"
-              />
+              <div className="weather-forecast-date">Thursday</div>
+              <div className="forecast-icon">
+                <WeatherIcon code="01d" size={36} />
+              </div>
               <div className="weather-forecast-temperature">5°</div>
             </div>
           </div>
@@ -39,13 +33,10 @@ export default function Forecast() {
         <div className="col-sm d-flex justify-content-center">
           <div className="forecast">
             <div className="forecast_first">
-              Thursday
-              <div className="weather-forecast-date"></div>
-              <img
-                src="suncloud.png"
-                className="forecast-icon"
-                alt="forecast-icon"
-              />
+              <div className="weather-forecast-date">Thursday</div>
+              <div className="forecast-icon">
+                <WeatherIcon code="01d" size={36} />
+              </div>
               <div className="weather-forecast-temperature">5°</div>
             </div>
           </div>
@@ -54,13 +45,10 @@ export default function Forecast() {
         <div className="col-sm d-flex justify-content-center">
           <div className="forecast">
             <div className="forecast_first">
-              Thursday
-              <div className="weather-forecast-date"></div>
-              <img
-                src="suncloud.png"
-                className="forecast-icon"
-                alt="forecast-icon"
-              />
+              <div className="weather-forecast-date">Thursday</div>
+              <div className="forecast-icon">
+                <WeatherIcon code="01d" size={36} />
+              </div>
               <div className="weather-forecast-temperature">5°</div>
             </div>
           </div>
@@ -69,13 +57,10 @@ export default function Forecast() {
         <div className="col-sm d-flex justify-content-center">
           <div className="forecast">
             <div className="forecast_first">
-              Thursday
-              <div className="weather-forecast-date"></div>
-              <img
-                src="suncloud.png"
-                className="forecast-icon"
-                alt="forecast-icon"
-              />
+              <div className="weather-forecast-date">Thursday</div>
+              <div className="forecast-icon">
+                <WeatherIcon code="01d" size={36} />
+              </div>
               <div className="weather-forecast-temperature">5°</div>
             </div>
           </div>
