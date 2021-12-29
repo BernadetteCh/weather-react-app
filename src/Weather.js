@@ -3,6 +3,8 @@ import axios from "axios";
 import "./Weather.css";
 import "./FormattedDate";
 import WeatherInfo from "./WeatherInfo"; //für eine bessere Übersicht hob i die Daten (aktuelle Temperatur, Niederschlag etc.) die im return gerendert werden in des component hingesendet.
+import Forecast from "./Forecast";
+import Hero from "./Hero";
 
 export default function Weather(props) {
   const [weather, setWeather] = useState({ loaded: false }); //bei default hat es das value loaded:false
@@ -19,6 +21,7 @@ export default function Weather(props) {
       citysearch: response.data.name,
       date: new Date(response.data.dt * 1000), //mit response.data.dt bekomm i die Computerzeit, die muss man mit 1000 multiplizieren und so kraig i die aktuelle Zeit. dann erstell i a component im return , dem diese Berechnung zugewiesen wird und des passiert mit FormattedDate date={weather.date}; newDate des is afoch der Code um zur aktuellen Zeit zu kommen, denn wenn i console.log(response.data.dt) moch erhalt i für dt eine längere Zahl. und mit newDate weiß der PC dass er die aktuelle Zeit ausrechnen muss, weil der PC bzw. JAva rechnet mit Zahlen seid ca 1970.....
       icon: response.data.weather[0].icon,
+      coordinates: response.data.coord,
     });
   }
 
@@ -53,8 +56,12 @@ export default function Weather(props) {
   if (weather.loaded) {
     return (
       <div className="weatherinformation">
-        <WeatherInfo data={weather} />
-        <div className="search">{form}</div>
+        <div className="container_hero">
+          <Hero />
+          <WeatherInfo data={weather} />
+          <div className="search">{form}</div>
+        </div>
+        <Forecast coords={weather.coordinates} />
       </div>
     );
   } else {
