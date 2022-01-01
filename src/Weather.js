@@ -40,9 +40,10 @@ export default function Weather(props) {
     axios.get(url).then(displayWeatherdata);
     //im APi Url is city der Wert props.defaultCity gegben, damit beim Laden wenn ma noch keiner city sucht schon eine bei default quasi angezeigt wird
   }
-
+  /*
   //Current Location
   function searchLocation(position) {
+    console.log(position);
     let apiKey = "fb5a52a1b1d04da9188f79aaf5843917";
     let lat = position.coords.latitude;
     let lon = position.coords.longitude;
@@ -53,7 +54,7 @@ export default function Weather(props) {
   function showLocation(event) {
     event.preventDefault();
     navigator.geolocation.getCurrentPosition(searchLocation);
-  }
+  }*/
   //cityNavigation functions
   function showNewyork(event) {
     event.preventDefault();
@@ -93,10 +94,9 @@ export default function Weather(props) {
         onChange={handleChange}
       />
       <input className="input-submit" type="submit" value="Search" />
-      <button onClick={showLocation}>Current Location</button>
     </form>
   );
-
+  // <button onClick={showLocation}>Current Location</button>
   let citynavigation = (
     <div>
       <header>
