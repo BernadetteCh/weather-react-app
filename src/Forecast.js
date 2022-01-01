@@ -7,9 +7,9 @@ export default function Forecast(props) {
   const [loaded, setLoaded] = useState(false);
   const [forecast, setForecast] = useState(null);
 
- useEffect(()=>{
-   setLoaded(false);
- }, [props.coords]);
+  useEffect(() => {
+    setLoaded(false);
+  }, [props.coords]);
 
   function handleForecast(response) {
     setForecast(response.data.daily);
@@ -22,7 +22,7 @@ export default function Forecast(props) {
       <div className="weather_forecast">
         <div className="row">
           {forecast.map(function (dailyForecast, index) {
-            if(index<5){
+            if (index < 5) {
               return (
                 <div
                   className="col-sm d-flex justify-content-center"
@@ -30,7 +30,10 @@ export default function Forecast(props) {
                 >
                   <ForecastDay forecastday={dailyForecast} />
                 </div>
-              );}
+              );
+            }else{
+              return null;
+            }
           })}
         </div>
       </div>
