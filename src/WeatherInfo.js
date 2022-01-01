@@ -12,7 +12,7 @@ export default function WeatherInfo(props) {
           <UnitConversion celsius={props.data.temperature} />
         </section>
         <div className="weatherinfo-icon">
-          <WeatherIcon code={props.data.icon} />
+          <WeatherIcon code={props.data.icon} color={"white"}/>
         </div>
 
         <h1>{props.data.citysearch}</h1>
