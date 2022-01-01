@@ -48,15 +48,14 @@ input[type="submit"] {
   margin: 0 5px;
   padding: 7px;
   width: 90px;
-  background-color: rgb(141, 93, 93, 0.9);
+  background-color: rgb(141, 93, 93, 0.6);
   color: white;
   transition: all 400ms ease-in-out;
   font-family: var(--subparagraph-font-family);
 }
 
 input[type="submit"]:hover {
-  background-color: rgb(236, 196, 196, 0.8);
-
+  background-color: rgb(236, 196, 196, 0.7);
   color: var(--third-color);
   border: 1px solid var(--third-color);
 }
@@ -172,7 +171,6 @@ button:hover {
     width: 150px;
   }
   input[type="submit"] {
-    padding: 3px;
     margin: 0px;
     font-size: 15px;
   }
