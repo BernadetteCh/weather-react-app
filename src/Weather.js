@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
 import "./FormattedDate";
+
 import WeatherInfo from "./WeatherInfo"; //für eine bessere Übersicht hob i die Daten (aktuelle Temperatur, Niederschlag etc.) die im return gerendert werden in des component hingesendet.
 import Forecast from "./Forecast";
-import Hero from "./Hero";
 
 export default function Weather(props) {
   const [weather, setWeather] = useState({ loaded: false }); //bei default hat es das value loaded:false
@@ -33,11 +33,55 @@ export default function Weather(props) {
   function handleChange(event) {
     setCity(event.target.value);
   }
+
   function search() {
     let apikey = "4ccd9ecf2f417deee06840bdb3b5e20a";
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apikey}`;
     axios.get(url).then(displayWeatherdata);
     //im APi Url is city der Wert props.defaultCity gegben, damit beim Laden wenn ma noch keiner city sucht schon eine bei default quasi angezeigt wird
+  }
+
+  //Current Location
+  function searchLocation(position) {
+    let apiKey = "fb5a52a1b1d04da9188f79aaf5843917";
+    let lat = position.coords.latitude;
+    let lon = position.coords.longitude;
+    let unit = "metric";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${unit}`;
+    axios.get(apiUrl).then(displayWeatherdata);
+  }
+  function showLocation(event) {
+    event.preventDefault();
+    navigator.geolocation.getCurrentPosition(searchLocation);
+  }
+  //cityNavigation functions
+  function showNewyork(event) {
+    event.preventDefault();
+    let apikey = "4ccd9ecf2f417deee06840bdb3b5e20a";
+    let city = "New York";
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apikey}`;
+    axios.get(url).then(displayWeatherdata);
+  }
+  function showVienna(event) {
+    event.preventDefault();
+    let apikey = "4ccd9ecf2f417deee06840bdb3b5e20a";
+    let city = "Vienna";
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apikey}`;
+    axios.get(url).then(displayWeatherdata);
+  }
+  function showLondon(event) {
+    event.preventDefault();
+    let apikey = "4ccd9ecf2f417deee06840bdb3b5e20a";
+    let city = "London";
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apikey}`;
+    axios.get(url).then(displayWeatherdata);
+  }
+  function showRome(event) {
+    event.preventDefault();
+    let apikey = "4ccd9ecf2f417deee06840bdb3b5e20a";
+    let city = "Rome";
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apikey}`;
+    axios.get(url).then(displayWeatherdata);
   }
 
   let form = (
@@ -49,15 +93,52 @@ export default function Weather(props) {
         onChange={handleChange}
       />
       <input className="input-submit" type="submit" value="Search" />
-      <button>Current Location</button>
+      <button onClick={showLocation}>Current Location</button>
     </form>
+  );
+
+  let citynavigation = (
+    <div>
+      <header>
+        <div className="row">
+          <div className="col-3">
+            <div className="city_navigation">
+              <a href="https://#/" rel="noreferrer" onClick={showNewyork}>
+                NewYork
+              </a>
+            </div>
+          </div>
+          <div className="col-3">
+            <div className="city_navigation">
+              <a href="https://#/" rel="noreferrer" onClick={showVienna}>
+                Vienna
+              </a>
+            </div>
+          </div>
+          <div className="col-3">
+            <div className="city_navigation">
+              <a href="https://#/" rel="noreferrer" onClick={showLondon}>
+                London
+              </a>
+            </div>
+          </div>
+          <div className="col-3">
+            <div className="city_navigation">
+              <a href="https://#/" rel="noreferrer" onClick={showRome}>
+                Rome
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
   );
 
   if (weather.loaded) {
     return (
       <div className="weatherinformation">
         <div className="container_hero">
-          <Hero />
+          {citynavigation}
           <WeatherInfo data={weather} />
           <div className="search">{form}</div>
         </div>
