@@ -39,7 +39,7 @@
   .forecast_first {
     display: flex;
     justify-content: space-between;
-    padding: 0px;
+    padding: 5px 5px;
   }
   .weather-forecast-date {
     font-size: 18px;
