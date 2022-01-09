@@ -2,9 +2,12 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
 import "./FormattedDate";
-
 import WeatherInfo from "./WeatherInfo"; //für eine bessere Übersicht hob i die Daten (aktuelle Temperatur, Niederschlag etc.) die im return gerendert werden in des component hingesendet.
 import Forecast from "./Forecast";
+import kolosseum from "./kolosseum.png";
+import londoneye from "./london-eye.png";
+import freiheitsstatue from "./freiheitsstatue.png";
+import austria from "./austria.png";
 
 export default function Weather(props) {
   const [weather, setWeather] = useState({ loaded: false }); //bei default hat es das value loaded:false
@@ -40,22 +43,7 @@ export default function Weather(props) {
     axios.get(url).then(displayWeatherdata);
     //im APi Url is city der Wert props.defaultCity gegben, damit beim Laden wenn ma noch keiner city sucht schon eine bei default quasi angezeigt wird
   }
-  /*
-  //Current Location
-  function searchLocation(position) {
-    console.log(position);
-    let apiKey = "fb5a52a1b1d04da9188f79aaf5843917";
-    let lat = position.coords.latitude;
-    let lon = position.coords.longitude;
-    let unit = "metric";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${unit}`;
-    axios.get(apiUrl).then(displayWeatherdata);
-  }
-  function showLocation(event) {
-    event.preventDefault();
-    navigator.geolocation.getCurrentPosition(searchLocation);
-  }*/
-  //cityNavigation functions
+
   function showNewyork(event) {
     event.preventDefault();
     let apikey = "4ccd9ecf2f417deee06840bdb3b5e20a";
@@ -96,7 +84,7 @@ export default function Weather(props) {
       <input className="input-submit" type="submit" value="Search" />
     </form>
   );
-  // <button onClick={showLocation}>Current Location</button>
+
   let citynavigation = (
     <div>
       <header>
@@ -104,28 +92,33 @@ export default function Weather(props) {
           <div className="col-3">
             <div className="city_navigation">
               <a href="https://#/" rel="noreferrer" onClick={showNewyork}>
-                NewYork
+               <img src={freiheitsstatue} alt="Statue of Liberty" title="NewYork-Statue of Liberty"></img>
               </a>
             </div>
           </div>
           <div className="col-3">
             <div className="city_navigation">
               <a href="https://#/" rel="noreferrer" onClick={showVienna}>
-                Vienna
+              <img src={austria} alt="Vienna" title="Vienna-Austria" ></img>
               </a>
             </div>
           </div>
           <div className="col-3">
             <div className="city_navigation">
               <a href="https://#/" rel="noreferrer" onClick={showLondon}>
-                London
+                <img
+                  src={londoneye}
+                  alt="london-eye"
+                  title="London London-Eye"
+                  width={50}
+                ></img>
               </a>
             </div>
           </div>
           <div className="col-3">
             <div className="city_navigation">
               <a href="https://#/" rel="noreferrer" onClick={showRome}>
-                Rome
+                <img src={kolosseum} title="Rome-coliseum" alt="coliseum"></img>
               </a>
             </div>
           </div>
