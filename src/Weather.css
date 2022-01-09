@@ -129,15 +129,6 @@ button:hover {
 .min-temperature {
   opacity: 0.5;
 }
-.city_navigation a {
-  font-family: var(--paragraph-font-family);
-  text-decoration: none;
-  color: var(--secondary-color);
-  font-weight: bold;
-}
-.city_navigation a:hover {
-  color: var(--primary-color);
-}
 
 .city_navigation {
   text-align: center;
