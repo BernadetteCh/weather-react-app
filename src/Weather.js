@@ -4,10 +4,7 @@ import "./Weather.css";
 import "./FormattedDate";
 import WeatherInfo from "./WeatherInfo"; //für eine bessere Übersicht hob i die Daten (aktuelle Temperatur, Niederschlag etc.) die im return gerendert werden in des component hingesendet.
 import Forecast from "./Forecast";
-import kolosseum from "./kolosseum.png";
-import londoneye from "./london-eye.png";
-import freiheitsstatue from "./freiheitsstatue.png";
-import austria from "./austria.png";
+import Header from "./Header";
 
 export default function Weather(props) {
   const [weather, setWeather] = useState({ loaded: false }); //bei default hat es das value loaded:false
@@ -44,35 +41,6 @@ export default function Weather(props) {
     //im APi Url is city der Wert props.defaultCity gegben, damit beim Laden wenn ma noch keiner city sucht schon eine bei default quasi angezeigt wird
   }
 
-  function showNewyork(event) {
-    event.preventDefault();
-    let apikey = "4ccd9ecf2f417deee06840bdb3b5e20a";
-    let city = "New York";
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apikey}`;
-    axios.get(url).then(displayWeatherdata);
-  }
-  function showVienna(event) {
-    event.preventDefault();
-    let apikey = "4ccd9ecf2f417deee06840bdb3b5e20a";
-    let city = "Vienna";
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apikey}`;
-    axios.get(url).then(displayWeatherdata);
-  }
-  function showLondon(event) {
-    event.preventDefault();
-    let apikey = "4ccd9ecf2f417deee06840bdb3b5e20a";
-    let city = "London";
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apikey}`;
-    axios.get(url).then(displayWeatherdata);
-  }
-  function showRome(event) {
-    event.preventDefault();
-    let apikey = "4ccd9ecf2f417deee06840bdb3b5e20a";
-    let city = "Rome";
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apikey}`;
-    axios.get(url).then(displayWeatherdata);
-  }
-
   let form = (
     <form className="search-form" onSubmit={handleSubmit}>
       <input
@@ -85,53 +53,11 @@ export default function Weather(props) {
     </form>
   );
 
-  let citynavigation = (
-    <div>
-      <header>
-        <div className="row">
-          <div className="col-3">
-            <div className="city_navigation">
-              <a href="https://#/" rel="noreferrer" onClick={showNewyork}>
-               <img src={freiheitsstatue} alt="Statue of Liberty" title="NewYork-Statue of Liberty"></img>
-              </a>
-            </div>
-          </div>
-          <div className="col-3">
-            <div className="city_navigation">
-              <a href="https://#/" rel="noreferrer" onClick={showVienna}>
-              <img src={austria} alt="Vienna" title="Vienna-Austria" ></img>
-              </a>
-            </div>
-          </div>
-          <div className="col-3">
-            <div className="city_navigation">
-              <a href="https://#/" rel="noreferrer" onClick={showLondon}>
-                <img
-                  src={londoneye}
-                  alt="london-eye"
-                  title="London London-Eye"
-                  width={50}
-                ></img>
-              </a>
-            </div>
-          </div>
-          <div className="col-3">
-            <div className="city_navigation">
-              <a href="https://#/" rel="noreferrer" onClick={showRome}>
-                <img src={kolosseum} title="Rome-coliseum" alt="coliseum"></img>
-              </a>
-            </div>
-          </div>
-        </div>
-      </header>
-    </div>
-  );
-
   if (weather.loaded) {
     return (
       <div className="weatherinformation">
         <div className="container_hero">
-          {citynavigation}
+          <Header data={displayWeatherdata} />
           <WeatherInfo data={weather} />
           <div className="search">{form}</div>
         </div>
