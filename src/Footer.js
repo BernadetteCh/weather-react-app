@@ -13,15 +13,15 @@ export default function Footer() {
         Open-source Code,
       </a>{" "}
       by{" "}
-      <a href="https://lucid-williams-1b13b8.netlify.app/" target="_blank" rel="noreferrer">
-        Bernadette Christiner
-      </a>{" "}
-      and hosted on{" "}
       <a
-        href="https://optimistic-curran-8bd91f.netlify.app"
+        href="https://lucid-williams-1b13b8.netlify.app/"
         target="_blank"
         rel="noreferrer"
       >
+        Bernadette Christiner
+      </a>{" "}
+      and hosted on{" "}
+      <a href="https://app.netlify.com/" target="_blank" rel="noreferrer">
         Netlify
       </a>{" "}
       <p>
