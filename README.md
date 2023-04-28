@@ -10,6 +10,10 @@ Check out the current weather and forecast of over 200,000 cities.
 
 Technologies used for this project React, Axios, Bootstrap, Restful API,
 
+### Instruction
+
+After you clone the project do npm install and then npm start. It will create the react app and will open it in your browser
+
 ### CodeSnippet
 
 We manipulate the url with the api key and use axios to get the weatherdata and then to call a function to display the data.
