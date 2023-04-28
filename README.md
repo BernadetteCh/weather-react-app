@@ -1,6 +1,6 @@
 # My Weather-React-App
 
-[link](https://optimistic-curran-8bd91f.netlify.app/)
+[link to the project](https://optimistic-curran-8bd91f.netlify.app/)
 
 ![My Weather-React-App!](/img/weatherapp.png "Check out the best weather app EVER ! (; )")
 
